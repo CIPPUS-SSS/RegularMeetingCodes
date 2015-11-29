@@ -2,7 +2,7 @@
 
 class person():#基类
     school = 'dlut'
-    identity = None
+    # identity = None
     age = None
     name  = None
 
@@ -13,6 +13,14 @@ class teacher(person):
     identity = 'teacher'
 
 def main_1():
+    '''
+    类class指的是具有相同性质和行为功能的抽象。
+    c++中，定义一个类只是定义了一种新的数据类型，可以用这种类型定义变量。
+    用定义的class类型定义的变量成为对象，对象是类的变量，类的对象也称为类的实例。
+    定义了对象才创建了类这种类型的物理实体，类和对象的关系是数据类型和变量的关系。
+
+    --c++语言程序设计教程（课本）
+    '''
     per = person()#实例
     stu = student()
     tea = teacher()
@@ -20,29 +28,5 @@ def main_1():
     print person.identity, stu.identity, tea.identity
 
 
-'''以下是廖雪峰的例子'''
-class animal():
-    def run(self):
-        print 'Animal is running.'
-
-class dog(animal):
-    def run(self):
-        print 'Dog is running.'
-
-    def eat():
-        print 'Eating dog food.'
-
-class cat(animal):
-    def run(self):
-        print 'Cat is running.'
-
-def main_2(obj):
-    obj.run()
-    # if isinstance(obj,animal):#判断示例类型
-    #     obj.run()
-
 if __name__=="__main__":
-    # main_2(animal())
-    # main_2(dog())
-    # main_2(cat())
     main_1()

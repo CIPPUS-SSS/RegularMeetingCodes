@@ -1,3 +1,4 @@
+
 void sort(int array[]){
 	int temp;
         for(int i = 0; i<6;i++){
