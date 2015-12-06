@@ -7,13 +7,13 @@
 class My_String
 {
 private:
-	char *m_data; // ÓÃÓÚ±£´æ×Ö·û´®
+	char *m_data; //  ç”¨äºä¿å­˜å­—ç¬¦ä¸²
 
 public:
-	My_String() : m_data(nullptr) {}
-	My_String(const char *str); //ÆÕÍ¨¹¹Ôìº¯Êı
-	My_String(const My_String &other);     //¿½±´¹¹Ôìº¯Êı
-	~My_String();                   //Îö¹¹º¯Êı
+	My_String() : m_data(nullptr) {}//é»˜è®¤æ„é€ å‡½æ•°
+	My_String(const char *str); //æ„é€ å‡½æ•°
+	My_String(const My_String &other);     //æ„é€ å‡½æ•°
+	~My_String();                   //ææ„å‡½æ•°
 	My_String& operator=(const My_String &other);
 	My_String operator+(const My_String &other);
 	bool operator<(const My_String& other) { return std::strlen(m_data) < std::strlen(other.m_data); }

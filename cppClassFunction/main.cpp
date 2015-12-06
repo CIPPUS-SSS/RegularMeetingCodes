@@ -4,9 +4,9 @@
 
 int main()
 {
-	My_String for_test1("hello world");
-	My_String for_test2("hello world");
-	My_String for_test3;
+	My_String for_test1("hello world");//隐式地调用构造函数
+	My_String for_test2("hello world");//隐式地调用构造函数
+	My_String for_test3;//默认构造函数在没有提供显示初始值时,又哦拿过来够之间对象的构造函数
 	std::cout << for_test1 << std::endl
 		<< for_test2 << std::endl;
 	for_test3 = for_test1 + for_test2;
@@ -26,5 +26,4 @@ int main()
 	system("pause>>nul");
 
 	return 0;
-
 }

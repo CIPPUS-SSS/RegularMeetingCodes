@@ -5,24 +5,28 @@
 #include <cctype>
 #include "Mystring.h"
 
+//æž„é€ å‡½æ•°
 My_String::My_String(const char *str)
 {
 	m_data = new char [std::strlen(str)+1];
 	std::strcpy(m_data, str);
 }
 
+//æž„é€ å‡½æ•°ï¼ˆé‡è½½)
 My_String::My_String(const My_String &other)
 {
 	m_data = nullptr;
 	*this = other;
 }
 
+//æžæž„å‡½æ•°
 My_String::~My_String()
 {
-	delete[] m_data;
+	delete[] m_data;//é‡Šæ”¾å†…å­˜
 	m_data = nullptr;
 }
 
+//è¿ç®—ç¬¦é‡è½½
 My_String& My_String::operator=(const My_String &other)
 {
 
@@ -82,7 +86,7 @@ My_String My_String::operator()(int begin_, int end_)
 	delete[] temp;
 
 	return result;
-	
+
 }
 
 std::istream& operator>>(std::istream& in, My_String& for_in)
@@ -126,7 +130,7 @@ void Edit_String::Insert_Words(int seek_)
 	}
 
 	Edit_String temp;
-	std::cout << "ÊäÈë²åÈë×Ö·û´®:";
+	std::cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½:";
 	std::cin >> temp;
 	char *dir_char = temp.Get_Seek(0), *sourse = Get_Seek(0);
 	char *result = new char[std::strlen(dir_char) + std::strlen(sourse) + 1]{};
@@ -140,7 +144,6 @@ void Edit_String::Insert_Words(int seek_)
 void Edit_String::Delete_Words(int seek_, int count_)
 {
 	char *temp = Get_Seek(0) , *result = nullptr;
-	
 	if (count_ >= Get_Length() - 1)
 	{
 		delete[] temp;
@@ -172,10 +175,10 @@ void Edit_String::Over_Words()
 {
 	Edit_String temp;
 	int seek = 0;
-	std::cout << "ÊäÈë¹â±ê:";
+	std::cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:";
 	std::cin >> seek;
 	std::cin.get();
-	std::cout << "ÊäÈëÐÞ¸Äºó½á¹û:";
+	std::cout << "ï¿½ï¿½ï¿½ï¿½ï¿½Þ¸Äºï¿½ï¿½ï¿½ï¿½ï¿½:";
 	std::cin >> temp;
 
 	for (int i = 0; i < temp.Get_Length() && i + seek < Get_Length(); i++)
